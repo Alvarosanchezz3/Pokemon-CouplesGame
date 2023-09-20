@@ -64,17 +64,17 @@ public class couplesGame {
             setLayout(new GridLayout(3, 4));
 
             cargarListaPokemon();
-            // Barajar la lista de Pokémon
+            // Barajar la lista de PokÃ©mon
             Collections.shuffle(listaPokemon);
 
             for (Pokemon pokemon : listaPokemon) {
                 JToggleButton boton = new JToggleButton();
                 boton.setIcon(imgCarta);
 
-                // Obtener el nombre del Pokémon actual
+                // Obtener el nombre del PokÃ©mon actual
                 String nombrePokemon = pokemon.getNombre();
 
-                // Configurar la imagen seleccionada para el botón
+                // Configurar la imagen seleccionada para el botÃ³n
                 Image reescalado = new ImageIcon(getClass().getResource("/img/" + nombrePokemon + ".png"))
                         .getImage().getScaledInstance(189, 266, java.awt.Image.SCALE_SMOOTH);
                 boton.setSelectedIcon(new ImageIcon(reescalado));
@@ -83,10 +83,10 @@ public class couplesGame {
                 boton.addActionListener(new ActionListener() {
                     public void actionPerformed(ActionEvent e) {
                         try {
-							procesarCarta(boton, pokemon);
-						} catch (InterruptedException e1) {
-							e1.printStackTrace();
-						}
+				procesarCarta(boton, pokemon);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
                     }
                 });
 
